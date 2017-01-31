@@ -45,6 +45,7 @@ from Sastrawi.Morphology.Disambiguator.DisambiguatorPrefixRule39 import Disambig
 from Sastrawi.Morphology.Disambiguator.DisambiguatorPrefixRule40 import DisambiguatorPrefixRule40a, DisambiguatorPrefixRule40b
 from Sastrawi.Morphology.Disambiguator.DisambiguatorPrefixRule41 import DisambiguatorPrefixRule41
 from Sastrawi.Morphology.Disambiguator.DisambiguatorPrefixRule42 import DisambiguatorPrefixRule42
+from Sastrawi.Morphology.Disambiguator.DisambiguatorPrefixRule43 import DisambiguatorPrefixRule43
 
 class VisitorProvider(object):
     """description of class"""
@@ -124,6 +125,9 @@ class VisitorProvider(object):
         #ku-A, kau-A
         self.prefix_pisitors.append(PrefixDisambiguator([DisambiguatorPrefixRule41()]))
         self.prefix_pisitors.append(PrefixDisambiguator([DisambiguatorPrefixRule42()]))
+
+        #ngeA -> ngeH
+        self.prefix_pisitors.append(PrefixDisambiguator([DisambiguatorPrefixRule43()]))
 
     def get_visitors(self):
         return self.visitors
